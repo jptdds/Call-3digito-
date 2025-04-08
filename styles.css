@@ -1,0 +1,100 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o fundo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo da calculadora */
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+}
+
+.calculator h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos campos de entrada */
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+    background-color: #eaf4fe;
+}
+
+/* Estilo dos botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #1f6fa3;
+}
+
+/* Estilo do resultado */
+#resultado {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+    
+    .buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    input[type="number"] {
+        width: 100%;
+    }
+}
